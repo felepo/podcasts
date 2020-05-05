@@ -1,7 +1,13 @@
+import Link from 'next/link';
+
 export default class extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <>
+        <Link href="/">
+          <a className="close">&lt; Volver</a>
+        </Link>
+
         <img src="/platzi-logo.png" alt="Platzi Logo" />
         <h1>Creado por Fernando</h1>
         <p>Curso de Next.js con React.js</p>
@@ -20,8 +26,12 @@ export default class extends React.Component {
               max-width: 60%;
               display: block;
               margin: 0 auto;
-              margin-top: 150px;
+              margin-top: 140px;
               margin-bottom: 50px;
+            }
+            .close {
+              color: white;
+              text-decoration: none;
             }
           `}
         </style>
@@ -33,7 +43,7 @@ export default class extends React.Component {
             }
           `}
         </style>
-      </React.Fragment>
+      </>
     );
   }
 }
